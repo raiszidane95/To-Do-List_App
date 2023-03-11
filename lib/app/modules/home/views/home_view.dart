@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../core/utils/extension.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -8,10 +9,14 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
+      body: SafeArea(
+        child: ListView(
+          children: [
+            Text(
+              'My List',
+              style: TextStyle(fontSize: 24.0.sp, fontWeight: FontWeight.bold),
+            ),
+          ],
         ),
       ),
     );

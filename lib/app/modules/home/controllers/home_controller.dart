@@ -1,23 +1,14 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:get/get.dart';
+import 'package:to_d_o_list_app/app/data/services/storage/repository.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
+  TaskRepository taskRepository;
+  HomeController({
+    required this.taskRepository,
+  });
 
-  final count = 0.obs;
-  @override
   void onInit() {
     super.onInit();
   }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }
