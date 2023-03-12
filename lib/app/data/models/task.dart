@@ -6,7 +6,13 @@ class Task extends Equatable {
   final String color;
   final List<dynamic>? todos;
 
-  const Task({required this.title, required this.icon, required this.color, this.todos});
+  const Task({
+    required this.title,
+    required this.icon,
+    required this.color,
+    this.todos,
+  });
+
   Task copyWith({
     String? title,
     int? icon,
@@ -14,10 +20,11 @@ class Task extends Equatable {
     List<dynamic>? todos,
   }) =>
       Task(
-          title: title ?? this.title,
-          icon: icon ?? this.icon,
-          color: color ?? this.color,
-          todos: todos ?? this.todos);
+        title: title ?? this.title,
+        icon: icon ?? this.icon,
+        color: color ?? this.color,
+        todos: todos ?? this.todos,
+      );
 
   factory Task.fromJson(Map<String, dynamic> json) => Task(
         title: json['title'],
@@ -34,5 +41,5 @@ class Task extends Equatable {
       };
 
   @override
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [title, icon, color];
 }
