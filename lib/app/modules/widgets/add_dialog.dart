@@ -50,7 +50,8 @@ class AddDialog extends StatelessWidget {
                         }
                       }
                     },
-                    style: ButtonStyle(overlayColor: MaterialStatePropertyAll(Colors.transparent)),
+                    style: const ButtonStyle(
+                        overlayColor: MaterialStatePropertyAll(Colors.transparent)),
                     child: Text(
                       'Done',
                       style: TextStyle(fontSize: 14.0.sp),

@@ -36,7 +36,7 @@ class AddCard extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: 3.0.wp),
                     child: TextFormField(
                       controller: homeCtrl.textEditingCtrl,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: 'Title',
                       ),
@@ -75,7 +75,7 @@ class AddCard extends StatelessWidget {
                   ),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: blue,
+                      backgroundColor: blue,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -93,7 +93,7 @@ class AddCard extends StatelessWidget {
                             : EasyLoading.showError('Duplicated Task');
                       }
                     },
-                    child: Text('Confirm'),
+                    child: const Text('Confirm'),
                   ),
                 ],
               ),
@@ -104,7 +104,7 @@ class AddCard extends StatelessWidget {
         },
         child: DottedBorder(
           color: Colors.grey[400]!,
-          dashPattern: [8, 4],
+          dashPattern: const [8, 4],
           child: Center(
             child: Icon(Icons.add, size: 10.0.wp, color: Colors.grey),
           ),
