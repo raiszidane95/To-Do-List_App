@@ -8,6 +8,7 @@ import '../../../core/utils/extension.dart';
 import '../../home/controllers/home_controller.dart';
 import '../controllers/detail_controller.dart';
 import '../widgets/doing_list.dart';
+import '../widgets/done_list.dart';
 
 class DetailView extends GetView<DetailController> {
   final homeCtrl = Get.find<HomeController>();
@@ -118,6 +119,7 @@ class DetailView extends GetView<DetailController> {
               ),
             ),
             DoingList(),
+            DoneList(),
           ],
         ),
       ),
